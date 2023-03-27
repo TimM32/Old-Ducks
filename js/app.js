@@ -35,11 +35,13 @@ function renderProducts() {
 
     while (product1 === product2 || product1 === product3) {
         product1 = getRandomNumber();
+    }
 
-        while (product2 === product1 || product2 === product3) {
+       
+    while (product2 === product1 || product2 === product3) {
             product2 = getRandomNumber();
         }
-    }
+    
 
     image1.src = Products.allProductsArray[product1].imageSrc;
     image2.src = Products.allProductsArray[product2].imageSrc;
@@ -65,7 +67,7 @@ function handleProductClick(event) {
 
 clicks++;
 let clickedOnProduct = event.target.alt;
-console.log("🚀 ~ file: app.js:68 ~ clickedOnProduct:", clickedOnProduct);
+console.log('🚀 ~ file: app.js:68 ~ clickedOnProduct:', clickedOnProduct);
 for (let i = 0; i < Products.allProductsArray.length; i++) {
     if (clickedOnProduct === Products.allProductsArray[i].name) {
         Products.allProductsArray[i].clickedOn++;
@@ -79,6 +81,7 @@ if(clicks === maxClicks) {
     resultsButton.addEventListener('click', renderResults);
     productContainer.className = 'no-voting'
 } else {
+    console.log('products are renderinggg')
     renderProducts();
 }
 
@@ -114,4 +117,4 @@ new Products ('Wine Glass', '../images/wine-glass.jpg');
 
 renderProducts();
 
-productContainer.addEventListener('click', handleProductClick);
+productContainer.addEventListener('click', handleProductClick)

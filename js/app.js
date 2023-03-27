@@ -63,7 +63,7 @@ function handleProductClick(event) {
     if (event.target === productContainer) {
         alert('Please click product image!');
     }
-}
+
 
 clicks++;
 let clickedOnProduct = event.target.alt;
@@ -83,6 +83,7 @@ if(clicks === maxClicks) {
 } else {
     console.log('products are renderinggg')
     renderProducts();
+}
 }
 
 function renderResults() {

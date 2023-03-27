@@ -97,7 +97,7 @@ function renderResults() {
 
 new Products ('Roller bag', '../images/bag.jpg');
 new Products ('Banana', '../images/banana.jpg');
-new Products ('Bathroom', '../images/bathroom.ipg');
+new Products ('Bathroom', '../images/bathroom.jpg');
 new Products ('Boots', '../images/boots.jpg');
 new Products ('Breakfast', '../images/breakfast.jpg');
 new Products ('Bubblegum', '../images/bubblegum.jpg');
@@ -109,7 +109,7 @@ new Products ('Pen', '../images/pen.jpg');
 new Products ('Pet Sweep', '../images/pet-sweep.jpg')
 new Products ('Scissors', '../images/scissors.jpg');
 new Products ('Shark', '../images/shark.jpg');
-new Products ('Sweep', '../images/swep.jpg');
+new Products ('Sweep', '../images/sweep.jpg');
 new Products ('Tauntaun', '../images/tauntaun.jpg');
 new Products ('Unicorn', '../images/unicorn.jpg');
 new Products ('Water Can', '../images/water-can.jpg');

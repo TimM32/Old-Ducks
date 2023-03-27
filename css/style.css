@@ -3,3 +3,11 @@ body {
     background-color: rgb(57, 55, 91);
     color: rgb(6, 190, 225);
 }
+
+
+
+#product_container {
+display: grid;
+grid-template-columns: repeat(3, 1fr)
+
+}

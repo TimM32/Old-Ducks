@@ -66,7 +66,7 @@ function handleProductClick(event) {
 clicks++;
 let clickedOnProduct = event.target.alt;
 console.log("🚀 ~ file: app.js:68 ~ clickedOnProduct:", clickedOnProduct);
-for (let i = 0, i < Products.allProductsArray.length; i++) {
+for (let i = 0; i < Products.allProductsArray.length; i++) {
     if (clickedOnProduct === Products.allProductsArray[i].name) {
         Products.allProductsArray[i].clickedOn++;
         break;
@@ -110,3 +110,8 @@ new Products ('Tauntaun', '../images/tauntaun.jpg');
 new Products ('Unicorn', '../images/unicorn.jpg');
 new Products ('Water Can', '../images/water-can.jpg');
 new Products ('Wine Glass', '../images/wine-glass.jpg');
+
+
+renderProducts();
+
+productContainer.addEventListener('click', handleProductClick);

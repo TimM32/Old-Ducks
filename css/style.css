@@ -17,16 +17,16 @@ h1 {
 }
 
 main {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 10px; */
 
 }
 
 #product_container {
     display: flex;
     gap: 10px;
-    flex-direction: column;
+    
 }
 
 #image1 {
@@ -44,7 +44,23 @@ main {
     width: 300px;
 }
 
+
+#results {
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer {
+    padding-top: 20%;
+}
+
 #results {
     font-size: 20px;
     background-color: aliceblue;
 }
+
+
+
+
+

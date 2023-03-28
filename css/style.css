@@ -17,31 +17,35 @@ h1 {
 }
 
 main {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;    
 
 }
 
 #product_container {
     display: flex;
     gap: 10px;
+    align-items: center;
     
 }
 
 #image1 {
     height: 300px;
     width: 300px;
+    
 }
 
 #image2 {
     height: 300px;
     width: 300px;
+    
 }
 
 #image3 {
     height: 300px;
     width: 300px;
+    
 }
 
 
@@ -56,7 +60,7 @@ footer {
 }
 
 #results {
-    font-size: 20px;
+    font-size: 30px;
     background-color: aliceblue;
     width: 360px;
     height: 300px;

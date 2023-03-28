@@ -77,7 +77,7 @@ for (let i = 0; i < Products.allProductsArray.length; i++) {
 
 
 if(clicks === maxClicks) {
-    productContainer.removeEventListener('click', renderResults);
+    productContainer.removeEventListener('click', handleProductClick);
     resultsButton.addEventListener('click', renderResults);
     productContainer.className = 'no-voting'
 } else {
@@ -103,13 +103,13 @@ new Products ('Breakfast', '../images/breakfast.jpg');
 new Products ('Bubblegum', '../images/bubblegum.jpg');
 new Products ('Chair', '../images/chair.jpg');
 new Products ('Cthulhu', '../images/cthulhu.jpg');
-new Products ('Dog', '../images/dog.jpg');
+new Products ('Dog', '../images/dog-duck.jpg');
 new Products ('Dragon', '../images/dragon.jpg');
 new Products ('Pen', '../images/pen.jpg');
 new Products ('Pet Sweep', '../images/pet-sweep.jpg')
 new Products ('Scissors', '../images/scissors.jpg');
 new Products ('Shark', '../images/shark.jpg');
-new Products ('Sweep', '../images/sweep.jpg');
+new Products ('Sweep', '../images/sweep.png');
 new Products ('Tauntaun', '../images/tauntaun.jpg');
 new Products ('Unicorn', '../images/unicorn.jpg');
 new Products ('Water Can', '../images/water-can.jpg');

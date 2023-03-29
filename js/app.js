@@ -134,9 +134,46 @@ function renderChart() {
     productsLike.push(Products.allProductsArray[i].clickedOn);
     productsView.push(Products.allProductsArray[i].views);
   }
-    console.log(productsName, productsLike, productsView);
+  console.log(productsName, productsLike, productsView);
 
-    
+  const ctx = document.getElementById('chartDemo');
+
+  new Chart(ctx, {
+    type: 'bar',
+
+    data: {
+      labels: productsName,
+      datasets: [
+        {
+          label: 'Products Liked',
+          backgroundColor: 'rgb(0,250,154)',
+          data: productLikes,
+          borderWidth: 2,
+        },
+        {
+          label: 'Products Viwed',
+          backgroundColor: 'rgb(221,160,221)',
+          data: productViews,
+          borderWidth: 2,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+}
+  
+
+
+
+
+
+  ); //closes
 
 }
 

@@ -134,7 +134,7 @@ if (saveProductsString) {
   for (let j = 0; j < arrayOfNotProducts, length; j++) {
     new Products(
       this.name = arrayOfNotProducts[j].name,
-      this.imageSrc = arrayOfNotProducts[j].src,
+      this.imageSrc = arrayOfNotProducts[j].imageSrc,
       this.views = arrayOfNotProducts[j].views,
       this.clickedOn = arrayOfNotProducts[j].clickedOn
     );

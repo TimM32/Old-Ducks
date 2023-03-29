@@ -34,7 +34,7 @@ function Products(name, src, views, clickOn) {
 
   Products.allProductsArray.push(this);
 }
-console.log('duccckksss', Products.allProductsArray);
+// console.log('duccckksss', Products.allProductsArray);
 
 
 function getRandomImg() {
@@ -133,10 +133,12 @@ if (saveProductsString) {
   for (let j = 0; j < arrayOfNotProducts, length; j++) {
     new Products(
       this.name = arrayOfNotProducts[j].name,
-      this.
-    )
+      this.imageSrc = arrayOfNotProducts[j].src,
+      this.views = arrayOfNotProducts[j].views,
+      this.clickedOn = arrayOfNotProducts[j].clickedOn
+    );
   }
-}
+} else {
 
 
 new Products('Roller bag', '../images/bag.jpg');
@@ -159,6 +161,7 @@ new Products('Unicorn', '../images/unicorn.jpg');
 new Products('Water Can', '../images/water-can.jpg');
 new Products('Wine Glass', '../images/wine-glass.jpg');
 
+}
 
 renderProducts();
 

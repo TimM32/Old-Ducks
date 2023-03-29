@@ -9,18 +9,29 @@ let resultsButton = document.getElementById('results');
 let image1 = document.getElementById('image1');
 let image2 = document.getElementById('image2');
 let image3 = document.getElementById('image3');
-console.log(productContainer, resultsButton, image1, image2, image3);
-
+// console.log(productContainer, resultsButton, image1, image2, image3);
 let clicks = 0;
 let maxClicks = 25;
 Products.allProductsArray = [];
 
 
-function Products(name, src) {
+function Products(name, src, views, clickOn) {
   this.name = name;
   this.imageSrc = src;
-  this.views = 0;
-  this.clickedOn = 0;
+
+
+  if (views) {
+    this.views = views;
+  } else {
+    this.views = 0;
+  }
+
+  if (clickedOn) {
+    this.clickedOn = clickedOn;
+  } else {
+    this.clickedOn = 0;
+  }
+
   Products.allProductsArray.push(this);
 }
 console.log('duccckksss', Products.allProductsArray);
@@ -42,24 +53,18 @@ function renderProducts() {
   }
   lastViewed.push(product1);
 
-
-
-  while (lastViewed.includes(product2)); {
+  while (lastViewed.includes(product2)) {
     product2 = getRandomImg();
   }
   lastViewed.push(product2);
 
-
-
-  while (lastViewed.includes(product3)); {
+  while (lastViewed.includes(product3)) {
     product3 = getRandomImg();
   }
   lastViewed.push(product3);
 
   console.log(lastViewed);
 
-   
-  for(let i = 0: i < 3)
   (lastViewed.length > 3) {
     lastViewed.splice(0, 3);
     console.log('inside if: ', lastViewed);
@@ -121,6 +126,17 @@ function renderResults() {
   }
 }
 
+let saveProductsString = localStorage.getItem('saveProduct');
+
+if (saveProductsString) {
+  let arrayOfNotProducts = JSON.parse(saveProductsString);
+  for (let j = 0; j < arrayOfNotProducts, length; j++) {
+    new Products(
+      this.name = arrayOfNotProducts[j].name,
+      this.
+    )
+  }
+}
 
 
 new Products('Roller bag', '../images/bag.jpg');

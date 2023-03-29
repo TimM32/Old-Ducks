@@ -67,10 +67,11 @@ footer {
 
 #results {
     font-size: 30px;
-    background-color: aliceblue;
+    background-color: rgb(131, 191, 233);
     width: 1060px;
     height: 700px;
     margin: 0 auto;
+    color: blue;
     
 }
 

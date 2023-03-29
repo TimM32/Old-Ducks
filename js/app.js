@@ -170,6 +170,7 @@ function renderChart() {
   });
 }
 
+// renderChart();
 
 productContainer.addEventListener('click', handleProductClick);
 

@@ -124,14 +124,19 @@ productContainer.addEventListener('click', handleProductClick);
 function renderChart() {
   console.log(Products.allProductsArray);
 
-let productsName = [];
-let productsLike = [];
-let productsView = [];
+  let productsName = [];
+  let productsLike = [];
+  let productsView = [];
 
 
-for(let i = 0; i < Products.allProductsArray.length; i++) {
-  productsName.push(Products.allProductsArray[i],name)
-}
+  for(let i = 0; i < Products.allProductsArray.length; i++) {
+    productsName.push(Products.allProductsArray[i].name);
+    productsLike.push(Products.allProductsArray[i].clickedOn);
+    productsView.push(Products.allProductsArray[i].views);
+  }
+    console.log(productsName, productsLike, productsView);
+
+    
 
 }
 

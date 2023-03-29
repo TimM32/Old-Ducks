@@ -2,6 +2,7 @@
 console.log('old ducks babay');
 
 let lastViewed = [];
+let currentViewed = [];
 
 let productContainer = document.getElementById('product_container');
 let resultsButton = document.getElementById('results');
@@ -57,9 +58,12 @@ function renderProducts() {
 
   console.log(lastViewed);
 
-  if (lastViewed.length > 3) {
+   
+  for(let i = 0: i < 3)
+  (lastViewed.length > 3) {
     lastViewed.splice(0, 3);
     console.log('inside if: ', lastViewed);
+
   }
 
 

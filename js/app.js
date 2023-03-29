@@ -2,7 +2,7 @@
 console.log('old ducks babay');
 
 let lastViewed = [];
-let currentViewed = [];
+
 
 let productContainer = document.getElementById('product_container');
 let resultsButton = document.getElementById('results');
@@ -127,6 +127,7 @@ function renderResults() {
 }
 
 let saveProductsString = localStorage.getItem('saveProduct');
+console.log('local storage' ,saveProductsString);
 
 if (saveProductsString) {
   let arrayOfNotProducts = JSON.parse(saveProductsString);
@@ -141,25 +142,25 @@ if (saveProductsString) {
 } else {
 
 
-new Products('Roller bag', '../images/bag.jpg');
-new Products('Banana', '../images/banana.jpg');
-new Products('Bathroom', '../images/bathroom.jpg');
-new Products('Boots', '../images/boots.jpg');
-new Products('Breakfast', '../images/breakfast.jpg');
-new Products('Bubblegum', '../images/bubblegum.jpg');
-new Products('Chair', '../images/chair.jpg');
-new Products('Cthulhu', '../images/cthulhu.jpg');
-new Products('Dog', '../images/dog-duck.jpg');
-new Products('Dragon', '../images/dragon.jpg');
-new Products('Pen', '../images/pen.jpg');
-new Products('Pet Sweep', '../images/pet-sweep.jpg');
-new Products('Scissors', '../images/scissors.jpg');
-new Products('Shark', '../images/shark.jpg');
-new Products('Sweep', '../images/sweep.png');
-new Products('Tauntaun', '../images/tauntaun.jpg');
-new Products('Unicorn', '../images/unicorn.jpg');
-new Products('Water Can', '../images/water-can.jpg');
-new Products('Wine Glass', '../images/wine-glass.jpg');
+  new Products('Roller bag', '../images/bag.jpg');
+  new Products('Banana', '../images/banana.jpg');
+  new Products('Bathroom', '../images/bathroom.jpg');
+  new Products('Boots', '../images/boots.jpg');
+  new Products('Breakfast', '../images/breakfast.jpg');
+  new Products('Bubblegum', '../images/bubblegum.jpg');
+  new Products('Chair', '../images/chair.jpg');
+  new Products('Cthulhu', '../images/cthulhu.jpg');
+  new Products('Dog', '../images/dog-duck.jpg');
+  new Products('Dragon', '../images/dragon.jpg');
+  new Products('Pen', '../images/pen.jpg');
+  new Products('Pet Sweep', '../images/pet-sweep.jpg');
+  new Products('Scissors', '../images/scissors.jpg');
+  new Products('Shark', '../images/shark.jpg');
+  new Products('Sweep', '../images/sweep.png');
+  new Products('Tauntaun', '../images/tauntaun.jpg');
+  new Products('Unicorn', '../images/unicorn.jpg');
+  new Products('Water Can', '../images/water-can.jpg');
+  new Products('Wine Glass', '../images/wine-glass.jpg');
 
 }
 

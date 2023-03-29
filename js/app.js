@@ -1,6 +1,8 @@
 'use strict';
 console.log('old ducks babay');
 
+let lastViewed = [];
+
 let productContainer = document.getElementById('product_container');
 let resultsButton = document.getElementById('results');
 let image1 = document.getElementById('image1');
@@ -23,24 +25,38 @@ function Products(name, src) {
 console.log('duccckksss', Products.allProductsArray);
 
 
-function getRandomNumber() {
+function getRandomImg() {
   return Math.floor(Math.random() * Products.allProductsArray.length);
 }
 
 function renderProducts() {
-  let product1 = getRandomNumber();
-  let product2 = getRandomNumber();
-  let product3 = getRandomNumber();
+  let product1 = getRandomImg();
+  let product2 = getRandomImg();
+  let product3 = getRandomImg();
   console.log(typeof product1, product2, product3);
 
-  while (product1 === product2 || product1 === product3) {
-    product1 = getRandomNumber();
+  while (lastViewed.includes(product1)) {
+    console.log('product1', product1);
+  }
+  lastViewed.push(product1);
+
+  while (lastViewed.includes(product2));{
+    product2 = getRandomImg();
+  }
+  lastViewed.push(product2);
+
+  while (lastViewed.includes(product3));{
+    product3 = getRandomImg();
+  }
+  lastViewed.push(product3);
+
+  console.log(lastViewed);
+
+  if (lastViewed.length > 3){
+    lastViewed.splice(0, 3);
+    console.log('inside the if: ',lastViewed);
   }
 
-
-  while (product2 === product1 || product2 === product3) {
-    product2 = getRandomNumber();
-  }
 
 
   image1.src = Products.allProductsArray[product1].imageSrc;

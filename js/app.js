@@ -118,10 +118,10 @@ new Products ('Wine Glass', '../images/wine-glass.jpg');
 
 renderProducts();
 
+productContainer.addEventListener('click', handleProductClick);
 
 
-
-function renderChart() {
+function displayChart() {
   console.log(Products.allProductsArray);
 
   let productsName = [];
@@ -172,5 +172,5 @@ function renderChart() {
 
 // renderChart();
 
-productContainer.addEventListener('click', handleProductClick);
+
 

@@ -80,8 +80,9 @@ function handleProductClick(event) {
     productContainer.removeEventListener('click', handleProductClick);
     resultsButton.addEventListener('click', renderResults);
     productContainer.className = 'no-voting';
+    displayChart();
   } else {
-    console.log('products are renderinggg');
+    // console.log('products are renderinggg');
     renderProducts();
   }
 }
@@ -93,8 +94,9 @@ function renderResults() {
     li.textContent = `${Products.allProductsArray[i].name} had ${Products.allProductsArray[i].views} views and was clicked ${Products.allProductsArray[i].clickedOn} times.`;
     ul.appendChild(li);
   }
-  displayChart();
 }
+
+
 
 new Products('Roller bag', '../images/bag.jpg');
 new Products('Banana', '../images/banana.jpg');
@@ -171,7 +173,6 @@ function displayChart() {
   });
 }
 
-// renderChart();
 
 
 

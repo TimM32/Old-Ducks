@@ -61,7 +61,7 @@ img {
 
 
 footer {
-    padding-top: 20%;
+    padding-top: 10%;
 }
 
 #results {
@@ -84,5 +84,8 @@ button {
 
 
 
+.no-voting {
+    background-color: rgb(244, 91, 105);
+}
 
 

@@ -54,7 +54,7 @@ function renderProducts() {
 
   if (lastViewed.length > 3){
     lastViewed.splice(0, 3);
-    console.log('inside the if: ',lastViewed);
+    console.log('inside if',lastViewed);
   }
 
 

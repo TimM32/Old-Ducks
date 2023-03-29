@@ -61,15 +61,17 @@ img {
 
 
 footer {
-    padding-top: 10%;
+    width: 1300px;
+    margin: 0 auto;
 }
 
 #results {
     font-size: 30px;
-    background-color: aliceblue;
-    width: 1360px;
-    height: 1000px;
+    background-color: rgb(131, 191, 233);
+    width: 1060px;
+    height: 700px;
     margin: 0 auto;
+    color: blue;
     
 }
 
@@ -87,5 +89,6 @@ button {
 .no-voting {
     background-color: rgb(244, 91, 105);
 }
+
 
 

@@ -3,26 +3,38 @@ console.log('old ducks babay');
 
 let lastViewed = [];
 
+
 let productContainer = document.getElementById('product_container');
 let resultsButton = document.getElementById('results');
 let image1 = document.getElementById('image1');
 let image2 = document.getElementById('image2');
 let image3 = document.getElementById('image3');
-console.log(productContainer, resultsButton, image1, image2, image3);
-
+// console.log(productContainer, resultsButton, image1, image2, image3);
 let clicks = 0;
 let maxClicks = 25;
 Products.allProductsArray = [];
 
 
-function Products(name, src) {
+function Products(name, src, views, clickedOn) {
   this.name = name;
   this.imageSrc = src;
-  this.views = 0;
-  this.clickedOn = 0;
+
+
+  if (views) {
+    this.views = views;
+  } else {
+    this.views = 0;
+  }
+
+  if (clickedOn) {
+    this.clickedOn = clickedOn;
+  } else {
+    this.clickedOn = 0;
+  }
+
   Products.allProductsArray.push(this);
 }
-console.log('duccckksss', Products.allProductsArray);
+// console.log('duccckksss', Products.allProductsArray);
 
 
 function getRandomImg() {
@@ -41,16 +53,12 @@ function renderProducts() {
   }
   lastViewed.push(product1);
 
-
-
-  while (lastViewed.includes(product2)); {
+  while (lastViewed.includes(product2)) {
     product2 = getRandomImg();
   }
   lastViewed.push(product2);
 
-
-
-  while (lastViewed.includes(product3)); {
+  while (lastViewed.includes(product3)) {
     product3 = getRandomImg();
   }
   lastViewed.push(product3);
@@ -60,6 +68,7 @@ function renderProducts() {
   if (lastViewed.length > 3) {
     lastViewed.splice(0, 3);
     console.log('inside if: ', lastViewed);
+
   }
 
 
@@ -117,28 +126,43 @@ function renderResults() {
   }
 }
 
+let saveProductsString = localStorage.getItem('saveProduct');
+console.log('local storage' ,saveProductsString);
+
+if (saveProductsString) {
+  let arrayOfNotProducts = JSON.parse(saveProductsString);
+  for (let j = 0; j < arrayOfNotProducts, length; j++) {
+    new Products(
+      this.name = arrayOfNotProducts[j].name,
+      this.imageSrc = arrayOfNotProducts[j].src,
+      this.views = arrayOfNotProducts[j].views,
+      this.clickedOn = arrayOfNotProducts[j].clickedOn
+    );
+  }
+} else {
 
 
-new Products('Roller bag', '../images/bag.jpg');
-new Products('Banana', '../images/banana.jpg');
-new Products('Bathroom', '../images/bathroom.jpg');
-new Products('Boots', '../images/boots.jpg');
-new Products('Breakfast', '../images/breakfast.jpg');
-new Products('Bubblegum', '../images/bubblegum.jpg');
-new Products('Chair', '../images/chair.jpg');
-new Products('Cthulhu', '../images/cthulhu.jpg');
-new Products('Dog', '../images/dog-duck.jpg');
-new Products('Dragon', '../images/dragon.jpg');
-new Products('Pen', '../images/pen.jpg');
-new Products('Pet Sweep', '../images/pet-sweep.jpg');
-new Products('Scissors', '../images/scissors.jpg');
-new Products('Shark', '../images/shark.jpg');
-new Products('Sweep', '../images/sweep.png');
-new Products('Tauntaun', '../images/tauntaun.jpg');
-new Products('Unicorn', '../images/unicorn.jpg');
-new Products('Water Can', '../images/water-can.jpg');
-new Products('Wine Glass', '../images/wine-glass.jpg');
+  new Products('Roller bag', '../images/bag.jpg');
+  new Products('Banana', '../images/banana.jpg');
+  new Products('Bathroom', '../images/bathroom.jpg');
+  new Products('Boots', '../images/boots.jpg');
+  new Products('Breakfast', '../images/breakfast.jpg');
+  new Products('Bubblegum', '../images/bubblegum.jpg');
+  new Products('Chair', '../images/chair.jpg');
+  new Products('Cthulhu', '../images/cthulhu.jpg');
+  new Products('Dog', '../images/dog-duck.jpg');
+  new Products('Dragon', '../images/dragon.jpg');
+  new Products('Pen', '../images/pen.jpg');
+  new Products('Pet Sweep', '../images/pet-sweep.jpg');
+  new Products('Scissors', '../images/scissors.jpg');
+  new Products('Shark', '../images/shark.jpg');
+  new Products('Sweep', '../images/sweep.png');
+  new Products('Tauntaun', '../images/tauntaun.jpg');
+  new Products('Unicorn', '../images/unicorn.jpg');
+  new Products('Water Can', '../images/water-can.jpg');
+  new Products('Wine Glass', '../images/wine-glass.jpg');
 
+}
 
 renderProducts();
 

@@ -15,7 +15,7 @@ let maxClicks = 25;
 Products.allProductsArray = [];
 
 
-function Products(name, src, views, clickOn) {
+function Products(name, src, views, clickedOn) {
   this.name = name;
   this.imageSrc = src;
 
@@ -65,7 +65,7 @@ function renderProducts() {
 
   console.log(lastViewed);
 
-  (lastViewed.length > 3) {
+  if (lastViewed.length > 3) {
     lastViewed.splice(0, 3);
     console.log('inside if: ', lastViewed);
 

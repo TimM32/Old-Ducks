@@ -119,3 +119,21 @@ new Products ('Wine Glass', '../images/wine-glass.jpg');
 renderProducts();
 
 productContainer.addEventListener('click', handleProductClick);
+
+
+function renderChart() {
+  console.log(Products.allProductsArray);
+
+let productsName = [];
+let productsLike = [];
+let productsView = [];
+
+
+for(let i = 0; i < Products.allProductsArray.length; i++) {
+  productsName.push(Products.allProductsArray[i],name)
+}
+
+}
+
+
+

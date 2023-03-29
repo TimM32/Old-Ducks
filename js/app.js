@@ -118,7 +118,7 @@ new Products ('Wine Glass', '../images/wine-glass.jpg');
 
 renderProducts();
 
-productContainer.addEventListener('click', handleProductClick);
+
 
 
 function renderChart() {
@@ -146,14 +146,16 @@ function renderChart() {
       datasets: [
         {
           label: 'Products Liked',
-          backgroundColor: 'rgb(0,250,154)',
-          data: productLikes,
+          backgroundColor: 'rgb(169, 206, 244)',
+          borderColor: 'rgb(152, 210, 235)',
+          data: productsLike,
           borderWidth: 2,
         },
         {
           label: 'Products Viwed',
-          backgroundColor: 'rgb(221,160,221)',
-          data: productViews,
+          backgroundColor: 'rgb(67, 146, 241)',
+          borderColor: 'rgb(152, 210, 235)',
+          data: productsView,
           borderWidth: 2,
         },
       ],
@@ -167,15 +169,7 @@ function renderChart() {
     },
   });
 }
-  
 
 
-
-
-
-  ); //closes
-
-}
-
-
+productContainer.addEventListener('click', handleProductClick);
 

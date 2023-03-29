@@ -30,7 +30,7 @@ main {
     
 }
 
-#image1 {
+/* #image1 {
     height: 300px;
     width: 300px;
     
@@ -44,10 +44,15 @@ main {
 
 #image3 {
     height: 300px;
-    width: 300px;
-    
-}
+    width: 300px;  
+} */
 
+img {
+    height: 300px;
+    width: 300px;
+    margin: 100px auto;
+    align-items: center;
+}
 
 #results {
     display: flex;
@@ -56,18 +61,31 @@ main {
 
 
 footer {
-    padding-top: 20%;
+    padding-top: 10%;
 }
 
 #results {
     font-size: 30px;
     background-color: aliceblue;
-    width: 360px;
-    height: 300px;
+    width: 1360px;
+    height: 1000px;
+    margin: 0 auto;
     
+}
+
+button {
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    color: blue;
+    font-size: 30px;
+    background-color: rgb(6, 190, 225);
 }
 
 
 
+.no-voting {
+    background-color: rgb(244, 91, 105);
+}
 
 

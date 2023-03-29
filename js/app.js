@@ -33,28 +33,33 @@ function renderProducts() {
   let product1 = getRandomImg();
   let product2 = getRandomImg();
   let product3 = getRandomImg();
-  console.log(typeof product1, product2, product3);
+  // console.log(typeof product1, product2, product3);
 
   while (lastViewed.includes(product1)) {
     console.log('product1', product1);
+    product1 = getRandomImg();
   }
   lastViewed.push(product1);
 
-  while (lastViewed.includes(product2));{
+
+
+  while (lastViewed.includes(product2)); {
     product2 = getRandomImg();
   }
   lastViewed.push(product2);
 
-  while (lastViewed.includes(product3));{
+
+
+  while (lastViewed.includes(product3)); {
     product3 = getRandomImg();
   }
   lastViewed.push(product3);
 
   console.log(lastViewed);
 
-  if (lastViewed.length > 3){
+  if (lastViewed.length > 3) {
     lastViewed.splice(0, 3);
-    console.log('inside if',lastViewed);
+    console.log('inside if: ', lastViewed);
   }
 
 
